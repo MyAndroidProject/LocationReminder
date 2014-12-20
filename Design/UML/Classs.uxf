@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>820</x>
+      <y>20</y>
+      <w>410</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>com.aml.locationreminder.autocomplete.PlaceJSONParser
+
+
+--
++parse(JSONObject jObject):List
+-getPlaces(JSONArray jPlaces):List
+-getPlace(JSONObject jPlace):List</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>580</x>
+      <y>160</y>
+      <w>480</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>com.aml.locationreminder..autocomplete.CustomAutoCompleteTextView
+
+
+--
++CustomAutoCompleteTextView(Context context, AttributeSet attrs)
+#convertSelectionToString(Object selectedItem):CharSequence 
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1210</x>
+      <y>120</y>
+      <w>580</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>com.aml.locationreminder.databasecomponent.LocationReminderDatabaseAccessUtility
+
+
+--
+# DB_NAME:String &lt;&lt;static&gt;&gt;
+# DB_VERSION:int{read only} &lt;&lt;static&gt;&gt;
+- dbHandler:LocationReminderDatabaseHandler 
+- authority:String  &lt;&lt;static&gt;&gt;
++ CONTENT_URI:Uri  &lt;&lt;static&gt;&gt;
+
+
+
+--
++onCreate():boolean
++query(Uri uri, String[] projection, String selection,
+			              String[] selectionArgs, String sortOrder):Cursor 
++delete(Uri arg0, String arg1, String[] arg2):int 	
++getType(Uri uri):String	
++insert(Uri uri, ContentValues values):Uri
++update(Uri uri, ContentValues values, String selection,
+			                 String[] selectionArgs):int
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>0</x>
+      <y>170</y>
+      <w>530</w>
+      <h>310</h>
+    </coordinates>
+    <panel_attributes>com.aml.locationreminder.databasecomponent.LocationReminderDatabaseHandler
+
+
+--
+#mbDataBase:SQLiteDatabase
+#table_name:String &lt;&lt;static&gt;&gt; {read only}
+
+
+{innerclass
+UserTable&lt;&lt;static&gt;&gt;
+--
++id:String  &lt;&lt;static&gt;&gt; 
++latitude:String  &lt;&lt;static&gt;&gt;  
++longitude:String  &lt;&lt;static&gt;&gt;  
+innerclass}
+--
+#LocationReminderDatabaseHandler(Context context, String name,
+                    CursorFactory factory, int version)
++onCreate(SQLiteDatabase db):void  
++run():void  
++ onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion):void    
+#getDb():SQLiteDatabase  
+#insert(Uri uri, ContentValues values):void 
+#delete(Uri arg0, String arg1, String[] arg2):void 
++queryData():Cursor        
+			                                                    </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>610</x>
+      <y>60</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>AutoCompleteTextView 
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>700</x>
+      <y>70</y>
+      <w>50</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>1410</x>
+      <y>10</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>ContentProvider</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>1460</x>
+      <y>30</y>
+      <w>50</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>10</x>
+      <y>50</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>SQLiteOpenHelper</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Class</type>
+    <coordinates>
+      <x>220</x>
+      <y>50</y>
+      <w>100</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;interface&gt;&gt;
+Runnable
+--
++run():void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>250</x>
+      <y>80</y>
+      <w>50</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;90</additional_attributes>
+  </element>
+  <element>
+    <type>com.baselet.element.old.element.Relation</type>
+    <coordinates>
+      <x>80</x>
+      <y>60</y>
+      <w>50</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>30;30;30;110</additional_attributes>
+  </element>
+</diagram>
