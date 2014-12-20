@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">LOCATION REMINDER</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="start">Start/Stop</string>
+    <string name="location">Enter the Location</string>
+    <string name="remove">Remove Location</string>
+    <string name="title_activity_add_location">AddLocationActivity</string>
+    <string name="title_activity_delete_place">DeletePlaceActivity</string>
+    <string name="title_activity_location_update">LocationUpdateActivit</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+    <string name="reach">You Reached</string>
+    <string name="place">Place</string>
+    <string name="delete">Do you want to delete the place</string>
+
+</resources>
