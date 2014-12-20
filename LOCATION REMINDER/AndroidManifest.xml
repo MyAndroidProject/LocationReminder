@@ -32,9 +32,14 @@
             </intent-filter>
         </activity>
          <service
-            android:name="com.aml.locationreminder.servicecomponent.LocationReminderService"
+            android:name="com.teamNIKaml.locationReminder.service.LocationReminderService"
             android:enabled="true" >
         </service>
+        <provider
+            android:name="com.teamNIKaml.locationReminder.databasecomponent.LocationReminderDatabaseAccessUtility"
+            android:authorities="com.teamNIKaml.locationReminder.databasecomponent.provider"
+            android:multiprocess="true" >
+        </provider>
         <activity
             android:name=".AddLocationActivity"
             android:label="@string/title_activity_add_location" >

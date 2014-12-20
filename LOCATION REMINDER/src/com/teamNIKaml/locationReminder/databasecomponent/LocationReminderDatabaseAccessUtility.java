@@ -9,7 +9,7 @@ public class LocationReminderDatabaseAccessUtility extends ContentProvider {
 	protected static String DB_NAME = "LocationReminder.db";
 	protected static final int DB_VERSION = 1;
 	LocationReminderDatabaseHandler dbHandler;
-	public static String authority = "com.aml.locationreminder.databasecomponent.provider";
+	public static String authority = "com.teamNIKaml.locationReminder.databasecomponent.provider";
 	public static Uri CONTENT_URI = Uri.parse("content://" + authority
 			+ "/LocationReminder");
 
